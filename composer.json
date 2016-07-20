@@ -1,6 +1,7 @@
 {
     "name": "et-soft/yii2-migrations-create",
     "description": "Console script for Yii2, for create migrations files from existing database.",
+    "license": "MIT",
     "require": {
         "php": "^5.4 || ^7.0"
     }
