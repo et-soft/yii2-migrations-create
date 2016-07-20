@@ -1,5 +1,11 @@
 # yii2-migrations-create
 
+[![Latest Stable Version](https://poser.pugx.org/et-soft/yii2-migrations-create/v/stable)](https://packagist.org/packages/et-soft/yii2-migrations-create)
+[![License](https://poser.pugx.org/et-soft/yii2-migrations-create/license)](https://packagist.org/packages/et-soft/yii2-migrations-create)
+[![Total Downloads](https://poser.pugx.org/et-soft/yii2-migrations-create/downloads)](https://packagist.org/packages/et-soft/yii2-migrations-create)
+[![Monthly Downloads](https://poser.pugx.org/et-soft/yii2-migrations-create/d/monthly)](https://packagist.org/packages/et-soft/yii2-migrations-create)
+[![Daily Downloads](https://poser.pugx.org/et-soft/yii2-migrations-create/d/daily)](https://packagist.org/packages/et-soft/yii2-migrations-create)
+
 Console script for Yii2, for create Yii2 migrations files from existing database.
 
 ### Install
