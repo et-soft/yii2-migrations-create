@@ -52,15 +52,53 @@ For create migration file selected table from database in directory app\migratio
 
 ### Examples
 
+For existing MySQL table with scheme:
+ 
+```
+ CREATE TABLE test
+ (
+     id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+     user_id INT(11) COMMENT 'ID user',
+     name VARCHAR(255) NOT NULL COMMENT 'Name',
+     phone VARCHAR(50) NOT NULL COMMENT 'Phone',
+     created DATETIME NOT NULL COMMENT 'Date created'
+ );
+```
 
-Show selectbox with values from 2015 (current year) to 1995 year (-20 years from current year):
+Migration script create in app\migrations directory? file m_test.php with content:
 
 ```php
-<?php echo $form->field($model, 'year')->widget(etsoft\widgets\YearSelectbox::classname(), [
-    'yearStart' => 0,
-    'yearEnd' => -20,
- ]);
-?>
+<?php
+
+use yii\db\Migration;
+
+/**
+ * Handles the creation for table `{{%test}}`.
+ */
+class m_test extends Migration
+{
+    /**
+     * @inheritdoc
+     */
+    public function up()
+    {
+        $this->createTable('{{%test}}', [
+            'id' => $this->primaryKey(),
+            'user_id' => $this->integer()->comment('ID user'),
+            'name' => $this->string(255)->notNull()->comment('Name'),
+            'phone' => $this->string(50)->notNull()->comment('Phone'),
+            'created' => $this->dateTime()->notNull()->comment('Date created'),
+        ]);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function down()
+    {
+        $this->dropTable('{{%test}}');
+    }
+}
 ```
 
 ### TODO in next releases
