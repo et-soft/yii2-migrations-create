@@ -2,7 +2,18 @@
     "name": "et-soft/yii2-migrations-create",
     "description": "Console script for Yii2, for create migrations files from existing database.",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Evgeny Titov",
+            "email": "etsoft2015@gmail.com"
+        }
+    ],
     "require": {
         "php": "^5.4 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "etsoft\\yii2migrations\\": ""
+        }
     }
 }
