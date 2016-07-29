@@ -11,6 +11,8 @@
     "require": {
         "php": "^5.4 || ^7.0"
     },
+    "minimum-stability": "dev",
+    "type": "yii2-extension",
     "autoload": {
         "psr-4": {
             "etsoft\\yii2migrations\\": ""
